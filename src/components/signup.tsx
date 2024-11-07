@@ -48,7 +48,7 @@ const Signup = () => {
     e.preventDefault();
     // Perform your form submission logic here
     try {
-      const response = await fetch("http://localhost:8000/register/", { // Replace with your API URL
+      const response = await fetch("http://localhost:8000/api/register/", { // Replace with your API URL
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -93,7 +93,7 @@ const Signup = () => {
 
       <TextField
         fullWidth
-        name="full_name"
+        name="fullName"
         label="Enter your full name"
         variant="outlined"
         value={formData.fullName}
@@ -124,7 +124,7 @@ const Signup = () => {
 
       <TextField
         fullWidth
-        name="date_of_birth"
+        name="dob"
         label="Date of birth"
         type="date"
         InputLabelProps={{ shrink: true }}
